@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(EditSchedule());
+  runApp(BodyEditSchedule());
 }
 
-class EditSchedule extends StatelessWidget {
+class BodyEditSchedule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
