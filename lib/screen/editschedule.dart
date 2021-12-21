@@ -35,6 +35,7 @@ class EditSchedule extends StatelessWidget {
                 )),
             Container(
               width: MediaQuery.of(context).size.width * 0.64,
+              color: Colors.amber,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,17 +53,75 @@ class EditSchedule extends StatelessWidget {
                     height: 48,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(0),
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(0, 10),
-                          blurRadius: 50,
-                          color: Colors.grey,
-                        ),
-                      ],
+                      borderRadius: BorderRadius.circular(5),
+                      // boxShadow: [
+                      //   BoxShadow(
+                      //     offset: Offset(0, 10),
+                      //     blurRadius: 50,
+                      //     color: Colors.grey,
+                      //   ),
+                      // ],
                     ),
                     child: Row(
                       children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8, right: 8),
+                          child: Icon(
+                            Icons.book_online,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        Expanded(
+                          child: TextField(
+                            onChanged: (value) {},
+                            decoration: InputDecoration(
+                              hintStyle: TextStyle(
+                                color: Colors.grey,
+                              ),
+                              enabledBorder: InputBorder.none,
+                              focusedBorder: InputBorder.none,
+
+                              // surffix isn't working properly  with SVG
+                              // thats why we use row
+                              // suffixIcon: SvgPicture.asset("assets/icons/search.svg"),
+                            ),
+                          ),
+                        ),
+                        // SvgPicture.asset("assets/icons/search.svg"),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: 0, right: 0, top: 10, bottom: 10),
+                    child: Text(
+                      'Jam',
+                      style: TextStyle(fontFamily: 'Keep Calm'),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(0),
+                      // boxShadow: [
+                      //   BoxShadow(
+                      //     offset: Offset(0, 10),
+                      //     blurRadius: 50,
+                      //     color: Colors.grey,
+                      //   ),
+                      // ],
+                    ),
+                    child: Row(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8, right: 8),
+                          child: Icon(
+                            Icons.access_time,
+                            color: Colors.grey,
+                          ),
+                        ),
                         Expanded(
                           child: TextField(
                             onChanged: (value) {},
@@ -85,7 +144,10 @@ class EditSchedule extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(
                         left: 0, right: 0, top: 10, bottom: 10),
-                    child: Text('Jam'),
+                    child: Text(
+                      'Link Zoom',
+                      style: TextStyle(fontFamily: 'Keep Calm'),
+                    ),
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -93,16 +155,23 @@ class EditSchedule extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(0),
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(0, 10),
-                          blurRadius: 50,
-                          color: Colors.grey,
-                        ),
-                      ],
+                      // boxShadow: [
+                      //   BoxShadow(
+                      //     offset: Offset(0, 10),
+                      //     blurRadius: 50,
+                      //     color: Colors.grey,
+                      //   ),
+                      // ],
                     ),
                     child: Row(
                       children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8, right: 8),
+                          child: Icon(
+                            Icons.link,
+                            color: Colors.grey,
+                          ),
+                        ),
                         Expanded(
                           child: TextField(
                             onChanged: (value) {},
@@ -125,7 +194,10 @@ class EditSchedule extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(
                         left: 0, right: 0, top: 10, bottom: 10),
-                    child: Text('Link Zoom'),
+                    child: Text(
+                      'Link Absen',
+                      style: TextStyle(fontFamily: 'Keep Calm'),
+                    ),
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -133,56 +205,23 @@ class EditSchedule extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(0),
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(0, 10),
-                          blurRadius: 50,
-                          color: Colors.grey,
-                        ),
-                      ],
+                      // boxShadow: [
+                      //   BoxShadow(
+                      //     offset: Offset(0, 10),
+                      //     blurRadius: 50,
+                      //     color: Colors.grey,
+                      //   ),
+                      // ],
                     ),
                     child: Row(
                       children: <Widget>[
-                        Expanded(
-                          child: TextField(
-                            onChanged: (value) {},
-                            decoration: InputDecoration(
-                              hintStyle: TextStyle(
-                                color: Colors.grey,
-                              ),
-                              enabledBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              // surffix isn't working properly  with SVG
-                              // thats why we use row
-                              // suffixIcon: SvgPicture.asset("assets/icons/search.svg"),
-                            ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8, right: 8),
+                          child: Icon(
+                            Icons.link_sharp,
+                            color: Colors.grey,
                           ),
                         ),
-                        // SvgPicture.asset("assets/icons/search.svg"),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 0, right: 0, top: 10, bottom: 10),
-                    child: Text('Link Absen'),
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    height: 48,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(0),
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(0, 10),
-                          blurRadius: 50,
-                          color: Colors.grey,
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      children: <Widget>[
                         Expanded(
                           child: TextField(
                             onChanged: (value) {},
