@@ -23,6 +23,13 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: title,
         theme: ThemeData(primarySwatch: Colors.indigo),
+        //klw mau liat yg hive punyaku baru kalian Uncomment ini punyaku
         home: MapelPage(),
+
+        //klw hanum mau liat hasil nya hanum code dibawah ini hapus comment nya ya
+        //home: HomeScreen(),
+
+        //klw nofal mau liat hasil nya hanum code dibawah ini hapus comment nya ya
+        //home: EditSchedule(),
       );
 }
