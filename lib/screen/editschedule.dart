@@ -42,7 +42,10 @@ class EditSchedule extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(
                         left: 0, right: 0, top: 10, bottom: 10),
-                    child: Text('Nama Matkul'),
+                    child: Text(
+                      'Nama Matkul',
+                      style: TextStyle(fontFamily: 'Keep Calm'),
+                    ),
                   ),
                   Container(
                     alignment: Alignment.center,
