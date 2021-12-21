@@ -1,3 +1,5 @@
+import 'package:class_scheduler_view/screen/editschedule.dart';
+import 'package:class_scheduler_view/screen/homescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'model/mapel.dart';
@@ -24,12 +26,12 @@ class MyApp extends StatelessWidget {
         title: title,
         theme: ThemeData(primarySwatch: Colors.indigo),
         //klw mau liat yg hive punyaku baru kalian Uncomment ini punyaku
-        home: MapelPage(),
+        // home: MapelPage(),
 
         //klw hanum mau liat hasil nya hanum code dibawah ini hapus comment nya ya
-        //home: HomeScreen(),
+        home: HomeScreen(),
 
         //klw nofal mau liat hasil nya hanum code dibawah ini hapus comment nya ya
-        //home: EditSchedule(),
+        // home: EditSchedule(),
       );
 }

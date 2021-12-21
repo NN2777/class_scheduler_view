@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -54,14 +54,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: <Widget>[
                   Text(
                     'Good Morning',
-                    style: GoogleFonts.inter(
+                    style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
                         color: Colors.black),
                   ),
                   Text(
                     'User XXX',
-                    style: GoogleFonts.inter(
+                    style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.w700,
                         color: Colors.black),
@@ -99,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           top: 65,
                           child: Text(
                             'CARD NUMBER',
-                            style: GoogleFonts.inter(
+                            style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.white),
