@@ -13,102 +13,56 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        margin: EdgeInsets.only(top: 8),
-        child: ListView(
-          physics: ClampingScrollPhysics(),
-          children: <Widget>[
-            //Custom Appbar
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
             Container(
-              margin: EdgeInsets.only(left: 16, right: 16, top: 16),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  GestureDetector(
-                    onTap: () {
-                      print('Drawer Tapped!');
-                    },
-                    child: SvgPicture.asset('assets/svg/drawer_icon.svg'),
-                  ),
-                  Container(
-                      height: 59,
-                      width: 59,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
-                            image: AssetImage(
-                                'assets/image/605297a994c841fcd877d32d5d316b7b.jpg')),
-                      )),
-                ],
+              margin: EdgeInsets.only(top: 33, right: 172, left: 172, bottom: 45),
+              child: Text(
+                'SCHEDULER',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                ),
               ),
             ),
-            // Card section
-            SizedBox(
-              height: 25,
+            Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(right: 68, left: 82),
+                  child: Text(
+                    'NAMA HARI',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 48,
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 73, right: 322),
+                  child: Text(
+                    'TANGGAL',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 30,
+                    ),
+                  ),
+                )
+              ],
             ),
-
-            Padding(
-              padding: EdgeInsets.only(left: 16, bottom: 16),
+            Container(
+              margin: EdgeInsets.only(top: 29, bottom: 95, left: 65, right: 65),
+              color: Color(0xffC4C4C4),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Good Morning',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black),
-                  ),
-                  Text(
-                    'User XXX',
-                    style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black),
-                  ),
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 36, left: 25, right: 25),
+                    
+                  )
                 ],
               ),
-            ),
-
-            Container(
-              height: 299,
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.only(left: 16, right: 6),
-                  itemCount: 7,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      margin: EdgeInsets.only(right: 10),
-                      height: 299,
-                      width: 344,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(28),
-                          color: Colors.blueGrey),
-                      child: Stack(children: <Widget>[
-                        Positioned(
-                          child: SvgPicture.asset(cards[index].cardElementTop),
-                        ),
-                        Positioned(
-                          bottom: 0,
-                          right: 0,
-                          child:
-                              SvgPicture.asset(cards[index].cardElementBottom),
-                        ),
-                        Positioned(
-                          left: 49,
-                          top: 65,
-                          child: Text(
-                            'CARD NUMBER',
-                            style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white),
-                          ),
-                        ),
-                      ]),
-                    );
-                  }),
-            ),
+            )
           ],
         ),
       ),
