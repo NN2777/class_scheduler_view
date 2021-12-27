@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -18,20 +17,19 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Row(
           children: [
             Container(
-              child: GestureDetector(
-                child: Image.asset(
-                  'images/kiri.png',
-                  width:30,
-                  height: 30,
-                ),                                 
-              )
-            ),
+                child: GestureDetector(
+              child: Image.asset(
+                'images/kiri.png',
+                width: 30,
+                height: 30,
+              ),
+            )),
             Container(
               child: Column(
                 children: [
                   Container(
-                    margin:
-                        EdgeInsets.only(top: 33, right: 172, left: 172, bottom: 45),
+                    margin: EdgeInsets.only(
+                        top: 33, right: 172, left: 172, bottom: 45),
                     child: Text(
                       'SCHEDULER',
                       style: TextStyle(
@@ -68,7 +66,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 29, bottom: 95, left: 65, right: 65),
+                    margin: EdgeInsets.only(
+                        top: 29, bottom: 95, left: 65, right: 65),
                     width: 282,
                     height: 443,
                     color: Color(0xffC4C4C4),
@@ -82,11 +81,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               Container(
                                 margin: EdgeInsets.only(
                                     top: 27, bottom: 27, left: 20, right: 14),
-                                    child: Image.asset(
-                                      'images/link.png',
-                                      width: 110,
-                                      height: 34,
-                                    ),
+                                child: Image.asset(
+                                  'images/link.png',
+                                  width: 110,
+                                  height: 34,
+                                ),
                               ),
                               Container(
                                 margin: EdgeInsets.only(
@@ -117,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     left: 210, right: 13, top: 37, bottom: 30),
                                 child: Image.asset(
                                   'images/clock.png',
-                                  width : 10,
+                                  width: 10,
                                   height: 10,
                                 ),
                               )
@@ -125,7 +124,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 25, right: 25, bottom: 200),
+                          margin:
+                              EdgeInsets.only(left: 25, right: 25, bottom: 200),
                           color: Color(0xffE2DFDF),
                           child: Column(
                             children: [
