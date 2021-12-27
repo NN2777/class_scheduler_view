@@ -29,9 +29,9 @@ class MyApp extends StatelessWidget {
         // home: MapelPage(),
 
         //klw hanum mau liat hasil nya hanum code dibawah ini hapus comment nya ya
-        // home: HomeScreen(),
+        home: HomeScreen(),
 
         //klw nofal mau liat hasil nya hanum code dibawah ini hapus comment nya ya
-        home: EditSchedule(),
+        //home: EditSchedule(),
       );
 }
