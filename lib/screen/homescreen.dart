@@ -19,6 +19,9 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Container(
               child: GestureDetector(
+                onTap : (){
+                  
+                },
                 child: Image.asset(
                   'images/kiri.png',
                   width:30,
