@@ -9,7 +9,24 @@ class EditSchedule extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Scheduler'),
+        title: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Icon(
+                Icons.list_outlined,
+                size: 34,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Text(
+                'Scheduler',
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
+          ],
+        ),
       ),
       body: ListView(
         children: [
@@ -60,7 +77,7 @@ class EditSchedule extends StatelessWidget {
                           color: Colors.white,
                           border: Border.all(
                             width: 2.0,
-                            color: Color(0xff43426D),
+                            color: Color(0xffD2D2DC),
                           ),
                           borderRadius: BorderRadius.circular(5),
                           // boxShadow: [
@@ -113,6 +130,10 @@ class EditSchedule extends StatelessWidget {
                         height: 48,
                         decoration: BoxDecoration(
                           color: Colors.white,
+                          border: Border.all(
+                            width: 2.0,
+                            color: Color(0xffD2D2DC),
+                          ),
                           borderRadius: BorderRadius.circular(0),
                           // boxShadow: [
                           //   BoxShadow(
@@ -163,6 +184,10 @@ class EditSchedule extends StatelessWidget {
                         height: 48,
                         decoration: BoxDecoration(
                           color: Colors.white,
+                          border: Border.all(
+                            width: 2.0,
+                            color: Color(0xffD2D2DC),
+                          ),
                           borderRadius: BorderRadius.circular(0),
                           // boxShadow: [
                           //   BoxShadow(
@@ -213,6 +238,10 @@ class EditSchedule extends StatelessWidget {
                         height: 48,
                         decoration: BoxDecoration(
                           color: Colors.white,
+                          border: Border.all(
+                            width: 2.0,
+                            color: Color(0xffD2D2DC),
+                          ),
                           borderRadius: BorderRadius.circular(0),
                           // boxShadow: [
                           //   BoxShadow(
@@ -257,37 +286,60 @@ class EditSchedule extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
-                            alignment: Alignment.center,
-                            height: 48,
+                            width: MediaQuery.of(context).size.width * 0.3,
+                            height: 44,
                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(0),
-                              // boxShadow: [
-                              //   BoxShadow(
-                              //     offset: Offset(0, 10),
-                              //     blurRadius: 50,
-                              //     color: Colors.grey,
-                              //   ),
-                              // ],
+                              color: Color(0xff43426D),
+                              borderRadius: BorderRadius.circular(5),
+                              boxShadow: [
+                                BoxShadow(
+                                  offset: Offset(0, 10),
+                                  blurRadius: 50,
+                                  color: Colors.grey,
+                                ),
+                              ],
                             ),
-                            child: Expanded(child: Text('asw')),
+                            child: TextButton(
+                              style: TextButton.styleFrom(
+                                textStyle: const TextStyle(fontSize: 20),
+                              ),
+                              onPressed: () {},
+                              child: const Text('SAVE',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'Poppins',
+                                      fontSize: 14)),
+                            ),
+                          ),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.04,
                           ),
                           Container(
-                            alignment: Alignment.center,
-                            height: 48,
+                            width: MediaQuery.of(context).size.width * 0.3,
+                            height: 44,
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(0),
-                              // boxShadow: [
-                              //   BoxShadow(
-                              //     offset: Offset(0, 10),
-                              //     blurRadius: 50,
-                              //     color: Colors.grey,
-                              //   ),
-                              // ],
+                              borderRadius: BorderRadius.circular(5),
+                              boxShadow: [
+                                BoxShadow(
+                                  offset: Offset(0, 10),
+                                  blurRadius: 50,
+                                  color: Colors.grey,
+                                ),
+                              ],
                             ),
-                            child: Expanded(child: Text('asw')),
-                          )
+                            child: TextButton(
+                              style: TextButton.styleFrom(
+                                textStyle: const TextStyle(fontSize: 20),
+                              ),
+                              onPressed: () {},
+                              child: const Text('NO',
+                                  style: TextStyle(
+                                      color: Color(0xff43426D),
+                                      fontFamily: 'Poppins',
+                                      fontSize: 14)),
+                            ),
+                          ),
                         ],
                       )
                     ],
