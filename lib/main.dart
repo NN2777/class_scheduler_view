@@ -28,10 +28,10 @@ class MyApp extends StatelessWidget {
         //klw mau liat yg hive punyaku baru kalian Uncomment ini punyaku
         // home: MapelPage(),
 
-        //klw hanum mau liat hasil nya hanum code dibawah ini hapus comment nya ya
+        // // klw hanum mau liat hasil nya hanum code dibawah ini hapus comment nya ya
         // home: HomeScreen(),
 
-        //klw nofal mau liat hasil nya hanum code dibawah ini hapus comment nya ya
+        // //klw nofal mau liat hasil nya hanum code dibawah ini hapus comment nya ya
         home: EditSchedule(),
       );
 }

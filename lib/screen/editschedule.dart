@@ -35,7 +35,6 @@ class EditSchedule extends StatelessWidget {
                 )),
             Container(
               width: MediaQuery.of(context).size.width * 0.64,
-              color: Colors.amber,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,6 +52,7 @@ class EditSchedule extends StatelessWidget {
                     height: 48,
                     decoration: BoxDecoration(
                       color: Colors.white,
+                      border: Border.all(width: 2.0, color: Colors.purple),
                       borderRadius: BorderRadius.circular(5),
                       // boxShadow: [
                       //   BoxShadow(
