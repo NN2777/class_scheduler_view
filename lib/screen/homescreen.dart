@@ -115,9 +115,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               Container(
                                 margin: EdgeInsets.only(
                                     left: 210, right: 13, top: 37, bottom: 30),
-                                child: Icon(
-                                  Icons.change_circle_outlined,
-                                  color: Colors.black,
+                                child: Image.asset(
+                                  'images/clock.png',
+                                  width : 10,
+                                  height: 10,
                                 ),
                               )
                             ],
