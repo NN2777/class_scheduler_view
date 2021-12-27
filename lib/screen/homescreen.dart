@@ -17,6 +17,19 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Row(
           children: [
             Container(
+<<<<<<< HEAD
+              child: GestureDetector(
+                onTap : (){
+                  
+                },
+                child: Image.asset(
+                  'images/kiri.png',
+                  width:30,
+                  height: 30,
+                ),                                 
+              )
+            ),
+=======
                 child: GestureDetector(
               child: Image.asset(
                 'images/kiri.png',
@@ -24,6 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 30,
               ),
             )),
+>>>>>>> f3b3de4f1ec66d9c9adf768cf2cb66efbc8a8409
             Container(
               child: Column(
                 children: [
