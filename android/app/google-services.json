@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "14277959681",
+    "project_id": "classscheduler-d71fd",
+    "storage_bucket": "classscheduler-d71fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:14277959681:android:24d57aa869f172e7822000",
+        "android_client_info": {
+          "package_name": "com.abdul.class_scheduler_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "14277959681-0c1g78o987ghi0q20kkap8l72kf758c6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApn81ZlZXJx5O-hghjGQYv4LyonjM7GMg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "14277959681-0c1g78o987ghi0q20kkap8l72kf758c6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.class_scheduler_view">
+    package="com.abdul.class_scheduler_firebase">
    <application
         android:label="class_scheduler_view"
         android:icon="@mipmap/ic_launcher">

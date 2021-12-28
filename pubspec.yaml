@@ -34,6 +34,9 @@ dependencies:
   hive: ^2.0.3
   hive_flutter: ^1.0.0
   flutter_svg: ^1.0.0
+  firebase_core: ^1.0.1
+  cloud_firestore: ^1.0.1
+  url_launcher: ^6.0.17
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -69,8 +72,8 @@ flutter:
 
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - images/LogoClass2.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -91,6 +94,24 @@ flutter:
     - family: Poppins
       fonts:
         - asset: fonts/Poppins-Medium.ttf
+    - family: Poppins-Regular
+      fonts:
+        - asset: fonts/POPPINS-REGULAR.TTF
+    - family: Poppins-Bold
+      fonts:
+        - asset: fonts/POPPINS-BOLD.OTF
+    - family: Poppins-Light
+      fonts:
+        - asset: fonts/POPPINS-LIGHT.OTF
+    - family: Poppins-ExtraBold
+      fonts:
+        - asset: fonts/POPPINS-EXTRABOLD.OTF
+    - family: Poppins-Medium
+      fonts:
+        - asset: fonts/POPPINS-MEDIUM.OTF
+    - family: Poppins-thin
+      fonts:
+        - asset: fonts/POPPINS-THIN.OTF
         # - asset: fonts/Schyler-Italic.ttf
           # style: italic
   #   - family: Trajan Pro
