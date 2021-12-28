@@ -1,5 +1,7 @@
+import 'dart:js';
+
+import 'package:class_scheduler_view/screen/editschedule.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -8,210 +10,357 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   get cards => null;
+  PageController _pageController = PageController();
+
+  void initState() {
+    super.initState();
+    _pageController = PageController(
+      initialPage: 0,
+      keepPage: true,
+      viewportFraction: 1,
+    );
+  }
+
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Row(
+      appBar: AppBar(
+        title: Row(
           children: [
-            Container(
-<<<<<<< HEAD
-              child: GestureDetector(
-                onTap : (){
-                  
-                },
-                child: Image.asset(
-                  'images/kiri.png',
-                  width:30,
-                  height: 30,
-                ),                                 
-              )
-            ),
-=======
-                child: GestureDetector(
-              child: Image.asset(
-                'images/kiri.png',
-                width: 30,
-                height: 30,
-              ),
-            )),
->>>>>>> f3b3de4f1ec66d9c9adf768cf2cb66efbc8a8409
-            Container(
-              child: Column(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(
-                        top: 33, right: 172, left: 172, bottom: 45),
-                    child: Text(
-                      'SCHEDULER',
-                      style: TextStyle(
-                        fontFamily: 'Keep Calm',
-                        color: Color(0xff43426D),
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
-                  Column(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(right: 68, left: 82),
-                        child: Text(
-                          'SENIN',
-                          style: TextStyle(
-                            fontFamily: 'Keep Calm',
-                            color: Color(0xff43426D),
-                            fontSize: 40,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 68, right: 82),
-                        child: Text(
-                          '12 Desember 2021',
-                          style: TextStyle(
-                            fontFamily: 'Keep Calm',
-                            color: Colors.black,
-                            fontSize: 30,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(
-                        top: 29, bottom: 95, left: 65, right: 65),
-                    width: 282,
-                    height: 443,
-                    color: Color(0xffC4C4C4),
-                    child: Column(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(top: 36, left: 25, right: 25),
-                          color: Colors.white,
-                          child: Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(
-                                    top: 27, bottom: 27, left: 20, right: 14),
-                                child: Image.asset(
-                                  'images/link.png',
-                                  width: 110,
-                                  height: 34,
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(
-                                    top: 20, left: 58, right: 105, bottom: 45),
-                                child: Text(
-                                  'SENIN',
-                                  style: TextStyle(
-                                    fontFamily: 'Keep Calm',
-                                    color: Colors.black,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(
-                                    top: 43, left: 58, right: 105, bottom: 22),
-                                child: Text(
-                                  '07.00 - 09.00',
-                                  style: TextStyle(
-                                    fontFamily: 'Keep Calm',
-                                    color: Colors.black,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(
-                                    left: 210, right: 13, top: 37, bottom: 30),
-                                child: Image.asset(
-                                  'images/clock.png',
-                                  width: 10,
-                                  height: 10,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin:
-                              EdgeInsets.only(left: 25, right: 25, bottom: 200),
-                          color: Color(0xffE2DFDF),
-                          child: Column(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(
-                                    top: 20, left: 20, right: 175, bottom: 95),
-                                child: Text(
-                                  'Link Zoom',
-                                  style: TextStyle(
-                                    fontFamily: 'Keep Calm',
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(
-                                    top: 20, left: 20, right: 175, bottom: 95),
-                                child: Text(
-                                  'https://zoom.us/j/95307811227?pwd=ZXFHNERtUUdpNmpJS2RxemRkR0Z3QT09',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontFamily: 'Keep Calm',
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(
-                                    top: 60, left: 20, right: 175, bottom: 54),
-                                child: Text(
-                                  'Link Absen',
-                                  style: TextStyle(
-                                      fontFamily: 'Keep Calm',
-                                      color: Colors.black,
-                                      fontSize: 25),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(
-                                    top: 20, left: 20, right: 175, bottom: 95),
-                                child: Text(
-                                  'https://slc.polinema.ac.id/spada/',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontFamily: 'Keep Calm',
-                                      color: Colors.black,
-                                      fontSize: 25),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Icon(
+                Icons.list_outlined,
+                size: 34,
               ),
             ),
-            Container(
-              child: GestureDetector(
-                child: Image.asset(
-                  'images/kanan.png',
-                  width: 30,
-                  height: 30,
-                ),
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Text(
+                'Scheduler',
+                style: TextStyle(fontSize: 18),
               ),
             ),
           ],
         ),
       ),
+      body: PageView(
+        controller: _pageController,
+        scrollDirection: Axis.horizontal,
+        pageSnapping: true,
+        reverse: false,
+        onPageChanged: (index) {
+          print("$index");
+        },
+        children: <Widget>[
+          Container(
+            width: MediaQuery.of(context).size.width,
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Padding(
+                padding: EdgeInsets.all(16),
+                child: Text(
+                  'SCHEDULER',
+                  style: TextStyle(fontFamily: 'Poppins', fontSize: 24.0),
+                ),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  'Senin',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontFamily: 'Poppins', fontSize: 34.0),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  '29-12-2021',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontFamily: 'Poppins'),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Container(
+                  child: FittedBox(
+                    fit: BoxFit.contain,
+                    child: Material(
+                      color: Colors.white,
+                      elevation: 14.0,
+                      borderRadius: BorderRadius.circular(24.0),
+                      shadowColor: Color(0xffD2D2DC),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            child: DetailPage(),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.64,
+                            height: 250,
+                            child: ClipRRect(
+                              borderRadius: new BorderRadius.circular(24.0),
+                              child: Image(
+                                fit: BoxFit.contain,
+                                alignment: Alignment.topRight,
+                                image: NetworkImage(
+                                    "https://media.istockphoto.com/photos/blue-book-stack-picture-id1290063471?b=1&k=20&m=1290063471&s=170667a&w=0&h=oLiQoa2Ewu9HKfBJzzvInI41vei54HLoEakxvIJvnsg="),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  _pageController.nextPage(
+                      duration: Duration(milliseconds: 600),
+                      curve: Curves.easeIn);
+                },
+                child: Text(
+                  "NEXT",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ]),
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Padding(
+                padding: EdgeInsets.all(16),
+                child: Text(
+                  'SCHEDULER',
+                  style: TextStyle(fontFamily: 'Poppins', fontSize: 24.0),
+                ),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  'Selasa',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontFamily: 'Poppins', fontSize: 34.0),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  '30-12-2021',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontFamily: 'Poppins'),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Container(
+                  child: FittedBox(
+                    fit: BoxFit.contain,
+                    child: Material(
+                      color: Colors.white,
+                      elevation: 14.0,
+                      borderRadius: BorderRadius.circular(24.0),
+                      shadowColor: Color(0xffD2D2DC),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            child: DetailPage2(),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.64,
+                            height: 250,
+                            child: ClipRRect(
+                              borderRadius: new BorderRadius.circular(24.0),
+                              child: Image(
+                                fit: BoxFit.contain,
+                                alignment: Alignment.topRight,
+                                image: NetworkImage(
+                                    "https://media.istockphoto.com/photos/blue-book-stack-picture-id1290063471?b=1&k=20&m=1290063471&s=170667a&w=0&h=oLiQoa2Ewu9HKfBJzzvInI41vei54HLoEakxvIJvnsg="),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  _pageController.nextPage(
+                      duration: Duration(milliseconds: 600),
+                      curve: Curves.easeIn);
+                },
+                child: Text(
+                  "NEXT",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  _pageController.nextPage(
+                      duration: Duration(milliseconds: 600),
+                      curve: Curves.easeIn);
+                },
+                child: Text(
+                  "PREVIOUS",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ]),
+          ),
+        ],
+      ),
     );
   }
+}
+
+Widget DetailPage() {
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: <Widget>[
+      Padding(
+        padding: const EdgeInsets.only(left: 16.0),
+        child: Container(
+          child: Text(
+            'S E N I N',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontFamily: 'Poppins', fontSize: 35),
+          ),
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(left: 16.0),
+        child: Container(
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  child: Text("Link Zoom",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.black54, fontSize: 18.0)),
+                ),
+              ]),
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(left: 16.0),
+        child: Container(
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  child: Text("Link Absen",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.black54, fontSize: 18.0)),
+                ),
+              ]),
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+        child: TextButton(
+          style: TextButton.styleFrom(
+            textStyle: const TextStyle(fontSize: 20),
+          ),
+          onPressed: () {
+            // Navigator.push(context,
+            //   MaterialPageRoute(builder: (context)=>EditSchedule()),
+            // );
+          },
+          child: const Text('Edit',
+              style: TextStyle(
+                  color: Color(0xff43426D),
+                  fontFamily: 'Poppins',
+                  fontSize: 25)),
+        ),
+      )
+    ],
+  );
+}
+Widget DetailPage2() {
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: <Widget>[
+      Padding(
+        padding: const EdgeInsets.only(left: 16.0),
+        child: Container(
+          child: Text(
+            'S E L A S A',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontFamily: 'Poppins', fontSize: 35),
+          ),
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(left: 16.0),
+        child: Container(
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  child: Text("Link Zoom",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.black54, fontSize: 18.0)),
+                ),
+              ]),
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(left: 16.0),
+        child: Container(
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  child: Text("Link Absen",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.black54, fontSize: 18.0)),
+                ),
+              ]),
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+        child: TextButton(
+          style: TextButton.styleFrom(
+            textStyle: const TextStyle(fontSize: 20),
+          ),
+          onPressed: () {
+            // Navigator.push(context,
+            //   MaterialPageRoute(builder: (context)=>EditSchedule()),
+            // );
+          },
+          child: const Text('Edit',
+              style: TextStyle(
+                  color: Color(0xff43426D),
+                  fontFamily: 'Poppins',
+                  fontSize: 25)),
+        ),
+      )
+    ],
+  );
 }
