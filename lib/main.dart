@@ -1,5 +1,6 @@
 import 'package:class_scheduler_view/screen/editschedule.dart';
 import 'package:class_scheduler_view/screen/homes_creen.dart';
+import 'package:class_scheduler_view/screens/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'model/mapel.dart';
@@ -18,20 +19,14 @@ Future main() async {
 }
 
 class MyApp extends StatelessWidget {
-  static final String title = 'Class Scheduller App';
-
   @override
-  Widget build(BuildContext context) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: title,
-        theme: ThemeData(primarySwatch: Colors.indigo),
-        //klw mau liat yg hive punyaku baru kalian Uncomment ini punyaku
-        // home: MapelPage(),
-
-        // // klw hanum mau liat hasil nya hanum code dibawah ini hapus comment nya ya
-        // home: HomeScreen(),
-
-        // //klw nofal mau liat hasil nya hanum code dibawah ini hapus comment nya ya
-        home: EditSchedule(),
-      );
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Class Scheduler',
+      debugShowCheckedModeBanner: false,
+      // theme: ThemeData(primarySwatch: Colors.indigo,brightness: Brightness.dark,),
+      theme: ThemeData(primarySwatch: Colors.indigo),
+      home: LoginScreen(),
+    );
+  }
 }
