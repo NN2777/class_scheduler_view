@@ -1,5 +1,5 @@
 import 'package:class_scheduler_view/screen/editschedule.dart';
-import 'package:class_scheduler_view/screen/homescreen.dart';
+import 'package:class_scheduler_view/screen/homes_creen.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'model/mapel.dart';
